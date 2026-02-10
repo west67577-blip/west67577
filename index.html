@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    setInterval(getTime, 1000);
+function getTime () {
+    var d = new Date();//time
+    var arr = d.toString().split(' ');//分割
+    $('#time').text(arr[4]);
+    $('#date').text(arr[1] +' '+ arr[2] +', '+ arr[3]);
+    console.log(arr[4]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+    console.log(arr[3]);
+    
+    if (d.getSeconds() == 0) {
+        var r = Math.floor(Math.random()*225);
+        var g = Math.floor(Math.random()*225);
+        var b = Math.floor(Math.random()*225);
+        var color = 'rgb('+ r + ',' + g + ',' + b + ')';
+        console.log(color); 
+        $('body').css('background-color', color);
+    }else if (d.getSeconds() == 20) {
+        var r = Math.floor(Math.random()*225);
+        var g = Math.floor(Math.random()*225);
+        var b = Math.floor(Math.random()*225);
+        var color = 'rgb('+ r + ',' + g + ',' + b + ')';
+        console.log(color); 
+        $('body').css('background-color', color);
+    }else if (d.getSeconds() == 30) {
+        var r = Math.floor(Math.random()*225);
+        var g = Math.floor(Math.random()*225);
+        var b = Math.floor(Math.random()*225);
+        var color = 'rgb('+ r + ',' + g + ',' + b + ')';
+        console.log(color); 
+        $('body').css('background-color', color);
+    }
+    
+}
+    </script>
+    <title>about me-eden0504</title>
+</head>
+<body>
+    <h3>About me-eden0504</h3>
+    <img src="https://cdn.discordapp.com/avatars/1368578557873360937/b82a0836beaeb1ddffa80989b0751a5b.png" alt="Eden0504's profile picture" width="200" height="200" id = "avatar">
+    <hr>
+    <p>你好!我是Eden0504,我是一個喜歡程式設計的國中生。</p>
+    <p>如果你想和我們一起玩的話,請加入我們的Discord伺服器!</p>
+    <a href=" https://discord.gg/3jd9ExD8mD" target="_blank" id = "discord-link">歡迎加入我們的Discord伺服器</a>
+    <div class="circle">
+        <div>
+            <h1 id="time">00:00:00</h1>
+            <h2 id="date">Jan 01, 2000</h2>
+        </div>
+    </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 15s;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+        }
+        p {
+            color: white;
+        }
+        h1 {
+            color: white;
+        }
+        #avatar {
+            border-radius: 50%;
+            margin-top: 20px;
+            border: 2px solid #333;
 
+            
+
+        }
+        h3 {
+            font-size: 30px;
+            color: white;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h1,h2 {
+            font-weight: bold;
+            font-family:Monospace;
+            color:white;
+            text-align: center;
+            margin: 0;
+            text-shadow:3px 3px 15px white; 
+        }
+        div {
+            position: relative;
+            margin-top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);/*transform: translateX(-50%);*//*transform: translateY(-50%);*/
+        }
+
+        .circle {
+            width: 300px;
+            height: 300px;
+            border: 5px solid white;
+            border-radius: 50%;
+            box-shadow:3px 3px 15px white ;
+        }
+    </style>
+
+</body>
+</html>
